@@ -20,7 +20,7 @@ function App() {
     initTodo = JSON.parse(localStorage.getItem("todos"));
   }
   const onDelete = (todo) => {
-    console.log("I'm onDelete of todo ", todo);
+    
 
     setTodos(
       todos.filter((e) => {
@@ -31,7 +31,7 @@ function App() {
   };
 
   const addTodo = (title, desc) => {
-    console.log("I am adding this todo", title, desc);
+    
     let sno;
     if (todos.length === 0) {
       sno = 1;
@@ -44,7 +44,7 @@ function App() {
       desc: desc,
     };
     setTodos([...todos, myTodo]);
-    console.log(myTodo);
+    
   };
 
   const [todos, setTodos] = useState(initTodo);
